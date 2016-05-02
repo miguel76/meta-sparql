@@ -1,1 +1,1 @@
-web: node app.js
+web: DEBUG=meta-sparql:* npm start
