@@ -6,25 +6,43 @@
        <owl:subClassOf rdf:resource="#OpN"/>
     </rdf:Description>
     <rdf:Description rdf:about="#Aggregation">
-       <owl:subClassOf rdf:resource="#Op1"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aggregation</rd:label>
+        <owl:subClassOf rdf:resource="#Op1"/>
     </rdf:Description>
     <rdf:Description rdf:about="#BGP">
-       <owl:subClassOf rdf:resource="#Op0"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basic Graph Pattern</rd:label>
+        <owl:subClassOf rdf:resource="#Op0"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#Construct">
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONSTRUCT Query</rd:label>
+        <owl:subClassOf rdf:resource="#GraphSource"/>
     </rdf:Description>
     <rdf:Description rdf:about="#Distinct">
-       <owl:subClassOf rdf:resource="#Op1"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Distinct</rd:label>
+        <owl:subClassOf rdf:resource="#Op1"/>
     </rdf:Description>
     <rdf:Description rdf:about="#Extend">
-       <owl:subClassOf rdf:resource="#Op1"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Extend</rd:label>
+        <owl:subClassOf rdf:resource="#Op1"/>
     </rdf:Description>
     <rdf:Description rdf:about="#Filter">
-       <owl:subClassOf rdf:resource="#Op1"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Filter</rd:label>
+        <owl:subClassOf rdf:resource="#Op1"/>
     </rdf:Description>
     <rdf:Description rdf:about="#Graph">
-       <owl:subClassOf rdf:resource="#Op1"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Graph</rd:label>
+        <owl:subClassOf rdf:resource="#Op1"/>
+    </rdf:Description>
+    <owl:Class rdf:about="#GraphSource">
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Graph Source</rd:label>
+    </owl:Class>
+    <rdf:Description rdf:about="#GraphUnion">
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Graph Union</rd:label>
+        <owl:subClassOf rdf:resource="#GraphSource"/>
     </rdf:Description>
     <rdf:Description rdf:about="#Group">
-       <owl:subClassOf rdf:resource="#Op1"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Group</rd:label>
+        <owl:subClassOf rdf:resource="#Op1"/>
     </rdf:Description>
     <rdf:Description rdf:about="#Join">
        <owl:subClassOf rdf:resource="#OpN"/>
@@ -35,60 +53,161 @@
     <rdf:Description rdf:about="#Minus">
        <owl:subClassOf rdf:resource="#Op2"/>
     </rdf:Description>
+    <rdf:Description rdf:about="#NamedGraphSource">
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Named Graph Source</rd:label>
+        <owl:subClassOf rdf:resource="#GraphSource"/>
+    </rdf:Description>
     <rdf:Description rdf:about="#Op0">
-       <owl:subClassOf rdf:resource="#Op"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Operation with Arity 0</rd:label>
+        <owl:subClassOf rdf:resource="#Op"/>
     </rdf:Description>
     <rdf:Description rdf:about="#Op1">
-       <owl:subClassOf rdf:resource="#Op"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Operation with Arity 1</rd:label>
+        <owl:subClassOf rdf:resource="#Op"/>
     </rdf:Description>
     <rdf:Description rdf:about="#Op2">
-       <owl:subClassOf rdf:resource="#Op"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Operation with Arity 2</rd:label>
+        <owl:subClassOf rdf:resource="#Op"/>
     </rdf:Description>
-   <owl:Class rdf:about="#Op"></owl:Class>
+    <owl:Class rdf:about="#Op">
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Generic Operation</rd:label>
+    </owl:Class>
     <rdf:Description rdf:about="#OpN">
-       <owl:subClassOf rdf:resource="#Op"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Operation with Arity N</rd:label>
+        <owl:subClassOf rdf:resource="#Op"/>
     </rdf:Description>
     <rdf:Description rdf:about="#OrderBy">
-       <owl:subClassOf rdf:resource="#Op1"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OrderBy</rd:label>
+        <owl:subClassOf rdf:resource="#Op1"/>
     </rdf:Description>
     <rdf:Description rdf:about="#Project">
-       <owl:subClassOf rdf:resource="#Op1"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project</rd:label>
+        <owl:subClassOf rdf:resource="#Op1"/>
     </rdf:Description>
     <rdf:Description rdf:about="#Reduced">
-       <owl:subClassOf rdf:resource="#Op1"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reduced</rd:label>
+        <owl:subClassOf rdf:resource="#Op1"/>
     </rdf:Description>
+    <owl:Class rdf:about="#Scalar">
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scalar for Aggregation</rd:label>
+    </owl:Class>
     <rdf:Description rdf:about="#Slice">
-       <owl:subClassOf rdf:resource="#Op1"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slice</rd:label>
+        <owl:subClassOf rdf:resource="#Op1"/>
     </rdf:Description>
     <rdf:Description rdf:about="#Table">
-       <owl:subClassOf rdf:resource="#Op0"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Table</rd:label>
+        <owl:subClassOf rdf:resource="#Op0"/>
     </rdf:Description>
     <rdf:Description rdf:about="#ToList">
-       <owl:subClassOf rdf:resource="#Op1"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ToList</rd:label>
+        <owl:subClassOf rdf:resource="#Op1"/>
     </rdf:Description>
     <rdf:Description rdf:about="#ToMultiSet">
-       <owl:subClassOf rdf:resource="#Op1"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ToMultiSet</rd:label>
+        <owl:subClassOf rdf:resource="#Op1"/>
     </rdf:Description>
     <rdf:Description rdf:about="#Union">
        <owl:subClassOf rdf:resource="#OpN"/>
     </rdf:Description>
+    <rdf:Description rdf:about="#aggrExprList">
+        <rd:domain rdf:resource="#Aggregation"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expression List for Aggregation</rd:label>
+        <rd:range rdf:resource="rdf:List"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#aggrScalar">
+        <rd:domain rdf:resource="#Aggregation"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scalar for Aggregation</rd:label>
+        <rd:range rdf:resource="#Scalar"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#aggrSetFunction">
+        <rd:domain rdf:resource="#Aggregation"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Set Function for Aggregation</rd:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="#bind">
+        <rd:domain rdf:resource="#Extend"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bind introduced in Extend</rd:label>
+        <rd:range rdf:resource="http://spinrdf.org/sp#Bind"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#expr">
+        <rd:domain rdf:resource="#Filter"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expression for Filter</rd:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="#fromGraphSource">
+        <rd:domain rdf:resource="#GraphUnion"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Graph Source for Union</rd:label>
+        <rd:range rdf:resource="#GraphSource"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#graphName">
+        <rd:domain rdf:resource="#NamedGraphSource"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Name of the Graph</rd:label>
+        <rd:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#graphSource">
+        <rd:domain rdf:resource="#Graph"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Graph Source</rd:label>
+        <rd:range rdf:resource="#GraphSource"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#groupExpression">
+        <rd:domain rdf:resource="#Group"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Group Expression</rd:label>
+    </rdf:Description>
     <rdf:Description rdf:about="#leftOp">
-       <owl:subPropertyOf rdf:resource="#subOp"/>
+        <rd:domain rdf:resource="#Op2"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Left Suboperation</rd:label>
+        <owl:subPropertyOf rdf:resource="#subOp"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#orderByConditions">
+        <rd:domain rdf:resource="#OrderBy"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">List of OrderBy Conditions</rd:label>
+        <rd:range rdf:resource="rdf:List"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#projectedVariable">
+        <rd:domain rdf:resource="#Project"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projected Variable</rd:label>
     </rdf:Description>
     <rdf:Description rdf:about="#rightOp">
-       <owl:subPropertyOf rdf:resource="#subOp"/>
+        <rd:domain rdf:resource="#Op2"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Right Suboperation</rd:label>
+        <owl:subPropertyOf rdf:resource="#subOp"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#scalarName">
+        <rd:domain rdf:resource="#Scalar"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scalar Name</rd:label>
+        <rd:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#scalarValue">
+        <rd:domain rdf:resource="#Scalar"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scalar Value</rd:label>
+        <rd:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Description>
     <rdf:Description rdf:about="#sliceLength">
         <rd:domain rdf:resource="#Slice"/>
-        <rd:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:integer</rd:range>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Length of Slice</rd:label>
+        <rd:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </rdf:Description>
     <rdf:Description rdf:about="#sliceStart">
         <rd:domain rdf:resource="#Slice"/>
-        <rd:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:integer</rd:range>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Start of Slice</rd:label>
+        <rd:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </rdf:Description>
     <owl:ObjectProperty rdf:about="#subOp">
-        <rd:domain rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#Op</rd:domain>
-        <rd:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#Op</rd:range>
+        <rd:domain rdf:resource="#Op"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Generic Suboperation</rd:label>
+        <rd:range rdf:resource="#Op"/>
     </owl:ObjectProperty>
-   <owl:Ontology rdf:about=""></owl:Ontology>
+    <rdf:Description rdf:about="#templateTriple">
+        <rd:domain rdf:resource="#Construct"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Construct Template Triple</rd:label>
+        <rd:range rdf:resource="http://spinrdf.org/sp#Triple"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#tuple">
+        <rd:domain rdf:resource="#BGP"/>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Triple Path or Triple Pattern</rd:label>
+        <rd:range rdf:resource="http://spinrdf.org/sp#Tuple"/>
+    </rdf:Description>
+    <owl:Ontology rdf:about="">
+        <rd:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An RDF schema used to represent SPARQL Algebra as RDF.</rd:comment>
+        <rd:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RDF Syntax for SPARQL Algebra</rd:label>
+    </owl:Ontology>
 </rdf:RDF>
