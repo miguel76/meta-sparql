@@ -40,7 +40,7 @@ router.get('/spa.:format?', function(req, res, next) {
                               'spa' + '.' + extAndMime.extension));
     }
   } else {
-    req.format( {
+    res.format( {
       'application/rdf+xml, default': function() {
         res.sendFile(path.join(ontologiesDir, '/spa.owl'));
       },
