@@ -1,0 +1,60 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "@base": "http://www.swows.org/2016/spa",
+    "superClassOf": {"@reverse": "owl:subClassOf"},
+    "superPropertyOf": {"@reverse": "owl:subPropertyOf"},
+    "domainOf": {"@reverse": "rdfs:domain"},
+    "domain": "rdfs:domain",
+    "range": "rdfs:range"
+  },
+  "@graph": [
+    {
+      "@id": "",
+      "@type": "owl:Ontology"
+    },
+    {
+      "@id": "#Op",
+      "@type": "owl:Class",
+      "superClassOf": [
+        {
+          "@id": "#Op0",
+          "superClassOf": [ {"@id": "#Table"}, {"@id": "#BGP"} ]
+        },
+        {
+          "@id": "#Op1",
+          "superClassOf": [
+            {"@id": "#Project"}, {"@id": "#Aggregation"}, {"@id": "#Distinct"},
+            {"@id": "#Extend"}, {"@id": "#Filter"},
+            {"@id": "#Graph"}, {"@id": "#Group"},
+            {"@id": "#OrderBy"}, {"@id": "#Reduced"},
+            {"@id": "#Slice",
+              "domainOf": [
+                {"@id": "#sliceLength", "range": "xsd:integer"},
+                {"@id": "#sliceStart", "range": "xsd:integer"} ]},
+            {"@id": "#ToList"}, {"@id": "#ToMultiSet"} ]
+        },
+        {
+          "@id": "#Op2",
+          "superClassOf": [ {"@id": "#LeftJoin"}, {"@id": "#Minus"} ]
+        },
+        {
+          "@id": "#OpN",
+          "superClassOf": [
+            {"@id": "#Union"}, {"@id": "#AggregateJoin"}, {"@id": "#Join"} ]
+        }
+      ]
+    },
+    {
+      "@id": "#subOp",
+      "@type": "owl:ObjectProperty",
+      "domain": "#Op",
+      "range": "#Op",
+      "superPropertyOf": [
+        {"@id": "#leftOp"}, {"@id": "#rightOp"}
+      ]
+    }
+  ]
+}

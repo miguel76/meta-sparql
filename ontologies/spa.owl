@@ -1,0 +1,94 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:rd="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description rdf:about="#AggregateJoin">
+       <owl:subClassOf rdf:resource="#OpN"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#Aggregation">
+       <owl:subClassOf rdf:resource="#Op1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#BGP">
+       <owl:subClassOf rdf:resource="#Op0"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#Distinct">
+       <owl:subClassOf rdf:resource="#Op1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#Extend">
+       <owl:subClassOf rdf:resource="#Op1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#Filter">
+       <owl:subClassOf rdf:resource="#Op1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#Graph">
+       <owl:subClassOf rdf:resource="#Op1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#Group">
+       <owl:subClassOf rdf:resource="#Op1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#Join">
+       <owl:subClassOf rdf:resource="#OpN"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#LeftJoin">
+       <owl:subClassOf rdf:resource="#Op2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#Minus">
+       <owl:subClassOf rdf:resource="#Op2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#Op0">
+       <owl:subClassOf rdf:resource="#Op"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#Op1">
+       <owl:subClassOf rdf:resource="#Op"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#Op2">
+       <owl:subClassOf rdf:resource="#Op"/>
+    </rdf:Description>
+   <owl:Class rdf:about="#Op"></owl:Class>
+    <rdf:Description rdf:about="#OpN">
+       <owl:subClassOf rdf:resource="#Op"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#OrderBy">
+       <owl:subClassOf rdf:resource="#Op1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#Project">
+       <owl:subClassOf rdf:resource="#Op1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#Reduced">
+       <owl:subClassOf rdf:resource="#Op1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#Slice">
+       <owl:subClassOf rdf:resource="#Op1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#Table">
+       <owl:subClassOf rdf:resource="#Op0"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#ToList">
+       <owl:subClassOf rdf:resource="#Op1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#ToMultiSet">
+       <owl:subClassOf rdf:resource="#Op1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#Union">
+       <owl:subClassOf rdf:resource="#OpN"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#leftOp">
+       <owl:subPropertyOf rdf:resource="#subOp"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#rightOp">
+       <owl:subPropertyOf rdf:resource="#subOp"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#sliceLength">
+        <rd:domain rdf:resource="#Slice"/>
+        <rd:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:integer</rd:range>
+    </rdf:Description>
+    <rdf:Description rdf:about="#sliceStart">
+        <rd:domain rdf:resource="#Slice"/>
+        <rd:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:integer</rd:range>
+    </rdf:Description>
+    <owl:ObjectProperty rdf:about="#subOp">
+        <rd:domain rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#Op</rd:domain>
+        <rd:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#Op</rd:range>
+    </owl:ObjectProperty>
+   <owl:Ontology rdf:about=""></owl:Ontology>
+</rdf:RDF>
