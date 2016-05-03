@@ -1,15 +1,19 @@
 var express = require('express'),
-    // negotiate = require('express-negotiate'),
+    fs = require('fs'),
     path = require('path');
-// require('express-negotiate');
 
 var router = express.Router();
 
 var ontologiesDir = path.join(__dirname, '..', 'ontologies');
+var dataDir = path.join(__dirname, '..', 'data');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render(
+    'index',
+    JSON.parse(fs.readFileSync(
+       path.join(dataDir, 'home.json'),
+       { encoding: 'UTF-8' })));
 });
 
 var mapExtension = function(format) {
@@ -42,10 +46,20 @@ router.get('/vocab/spa.:format?', function(req, res, next) {
   } else {
     res.format( {
       'application/rdf+xml, default': function() {
-        res.sendFile(path.join(ontologiesDir, '/spa.owl'));
+        res.sendFile(path.join(ontologiesDir, 'spa.owl'));
       },
       'application/ld+json': function() {
-        res.sendFile(path.join(ontologiesDir, '/spa.jsonld'));
+        res.sendFile(path.join(ontologiesDir, 'spa.jsonld'));
+      },
+      'text/html': function() {
+        res.render(
+          'ontology',
+          { tree:
+              JSON.parse(fs.readFileSync(
+                path.join(ontologiesDir, 'spa.jsonld'),
+                { encoding: 'UTF-8' })),
+            path: '/vocab/spa'
+          });
       }
       // 'application/owl+xml': function() {
       //   res.sendFile(ontologiesDir + '/spa.owx');

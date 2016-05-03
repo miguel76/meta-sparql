@@ -18,7 +18,8 @@
       "@id": "",
       "@type": "owl:Ontology",
       "label": "RDF Syntax for SPARQL Algebra",
-      "comment": "An RDF schema used to represent SPARQL Algebra as RDF."
+      "comment": "An RDF schema used to represent SPARQL Algebra as RDF.",
+      "owl:versionInfo": "0.1.0"
     },
     {
       "@id": "#Op",
