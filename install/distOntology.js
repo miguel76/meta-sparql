@@ -22,8 +22,10 @@ jsonld.toRDF(jsonldObj, {format: 'application/nquads'}, function(err, nquads) {
         if (err) {
           console.log(err);
         } else {
+          // var base = jsonldObj["@context"] && jsonldObj["@context"]["@base"];
+          // not using base because is not explicitly set in rdf/xml
           rdflib.serialize(
-            null, store, 'http://www.swows.org/2016/spa', 'application/rdf+xml',
+            null, store, null, 'application/rdf+xml',
             function(err, rdfXml) {
               if (err) {
                 console.log(err);

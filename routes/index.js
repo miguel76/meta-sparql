@@ -27,7 +27,7 @@ var mapExtension = function(format) {
   }
 };
 
-router.get('/spa.:format?', function(req, res, next) {
+router.get('/vocab/spa.:format?', function(req, res, next) {
   console.log(req.params.format);
   console.log(mapExtension(req.params.format));
   if (req.params.format && req.params.format !== '') {

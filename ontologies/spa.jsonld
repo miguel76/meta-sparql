@@ -4,7 +4,7 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "sp": "http://spinrdf.org/sp#",
-    "@base": "http://www.swows.org/2016/spa",
+    "@base": "http://meta-sparql.org/vocab/spa",
     "superClassOf": {"@reverse": "owl:subClassOf", "@type": "@id"},
     "superPropertyOf": {"@reverse": "owl:subPropertyOf", "@type": "@id"},
     "domainOf": {"@reverse": "rdfs:domain", "@type": "@id"},
